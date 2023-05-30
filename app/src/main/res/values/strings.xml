@@ -1,0 +1,14 @@
+<resources>
+    <string name="app_name">FreshcanApp</string>
+    <string name="loginString">Login</string>
+    <string name="usernameString">Username</string>
+    <string name="passwordString">Password</string>
+    <string name="signup_question_text">Don\'t have an account?</string>
+    <string name="forgot_password_text">Forgot password?</string>
+    <string name="or_signin_text">Or Sign In Using</string>
+    <string name="signUpString">SignUp</string>
+    <string name="emailString">Email</string>
+    <string name="usernameEmailString">Username\\Email</string>
+    <string name="signupButtonText">SIGNUP</string>
+    <string name="have_account_text">Already have an account?</string>
+</resources>
