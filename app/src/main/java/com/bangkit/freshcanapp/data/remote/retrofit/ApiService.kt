@@ -28,7 +28,7 @@ interface ApiService {
     @POST("/upload/image")
     fun uploadImage(
         @Header("Authorization") token: String,
-        @Part("file") file: MultipartBody.Part
+        @Part file: MultipartBody.Part
     ): Call<UploadImageResponse>
 //
 //    @GET("/v1/stories")
