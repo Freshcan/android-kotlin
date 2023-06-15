@@ -26,9 +26,9 @@ class PasswordEditText : AppCompatEditText {
 
     override fun onTextChanged(text: CharSequence?, start: Int, lengthBefore: Int, lengthAfter: Int) {
         super.onTextChanged(text, start, lengthBefore, lengthAfter)
-        if (text?.length ?: 0 < 8) {
+        if (text?.length ?: 0 < 6) {
             // set error message
-            setError("The password must have a minimum of 8 characters", null)
+            setError("The password must have a minimum of 6 characters", null)
         } else {
             // clear error message
             error = null

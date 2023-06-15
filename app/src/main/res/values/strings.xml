@@ -11,4 +11,25 @@
     <string name="usernameEmailString">Username\\Email</string>
     <string name="signupButtonText">SIGNUP</string>
     <string name="have_account_text">Already have an account?</string>
+    <string name="error_string">Freshcan is unable to detect the\nimage yet</string>
+    <string name="error_content_string">Not Found</string>
+    <string name="tap_text">Tap to Freshcan</string>
+    <string name="masukkan_password">Masukkan password</string>
+    <string name="masukkan_email">Masukkan email</string>
+    <string name="masukkan_username">Masukkan username</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="recenlty_text">Recently</string>
+    <string name="bahan_placeholder_text">Bahan</string>
+    <string name="tanggal_dummy">12 May, 15:30</string>
+    <string name="detail">Detail</string>
+    <string name="buah_detail_placeholder">Mangga</string>
+    <string name="detail_description">Description</string>
+    <string name="detail_benefits_title">Benefits</string>
+    <string name="detail_funfact_title">Fun fact</string>
+    <string name="detail_keyfact_title">Key fact</string>
+    <string name="confirmPasswordString">Confirm Password</string>
+    <string name="fresh">Fresh</string>
+    <string name="rotten">Rotten</string>
+    <string name="freshness_percent_placeholder">88,88%</string>
 </resources>

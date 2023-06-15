@@ -6,6 +6,8 @@
     android:layout_height="match_parent"
     tools:context=".ui.view.login.LoginActivity">
 
+
+
     <TextView
         android:id="@+id/signUpText"
         android:layout_width="0dp"
@@ -61,7 +63,7 @@
             app:startIconDrawable="@drawable/ic_baseline_account_circle_24">
 
 
-            <com.bangkit.freshcanapp.ui.customview.EmailEditText
+            <com.google.android.material.textfield.TextInputEditText
                 android:id="@+id/usernameEditText"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
@@ -73,6 +75,19 @@
 
         </com.google.android.material.textfield.TextInputLayout>
     </androidx.cardview.widget.CardView>
+
+    <TextView
+        android:id="@+id/usernameEditTextError"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="40dp"
+        android:layout_marginTop="5dp"
+        android:text="@string/masukkan_username"
+        android:textColor="#BC0000"
+        android:visibility="gone"
+        android:textSize="12sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/cardViewUsername" />
 
     <TextView
         android:id="@+id/emailText"
@@ -94,6 +109,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginStart="32dp"
+        android:layout_marginTop="10dp"
         android:layout_marginEnd="32dp"
         app:cardElevation="4dp"
         app:layout_constraintEnd_toEndOf="parent"
@@ -108,7 +124,7 @@
             app:boxBackgroundColor="#FFFFFF"
             app:boxStrokeColor="#FFFFFF"
             app:boxStrokeWidth="0dp"
-            app:startIconDrawable="@drawable/ic_baseline_account_circle_24">
+            app:startIconDrawable="@drawable/ic_baseline_email_24">
 
 
             <com.bangkit.freshcanapp.ui.customview.EmailEditText
@@ -123,6 +139,19 @@
 
         </com.google.android.material.textfield.TextInputLayout>
     </androidx.cardview.widget.CardView>
+
+    <TextView
+        android:id="@+id/emailEditTextError"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="40dp"
+        android:layout_marginTop="5dp"
+        android:text="@string/masukkan_email"
+        android:textColor="#BC0000"
+        android:visibility="gone"
+        android:textSize="12sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/cardViewEmail" />
 
 
     <TextView
@@ -180,20 +209,99 @@
 
         </com.google.android.material.textfield.TextInputLayout>
     </androidx.cardview.widget.CardView>
+    <TextView
+        android:id="@+id/passwordEditTextError"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="40dp"
+        android:layout_marginTop="5dp"
+        android:text="@string/masukkan_password"
+        android:textColor="#BC0000"
+        android:visibility="gone"
+        android:textSize="12sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/cardViewPassword" />
 
-    <Button
-        android:id="@+id/button"
+    <TextView
+        android:id="@+id/passwordText3"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="32dp"
+        android:layout_marginEnd="32dp"
+        android:text="@string/confirmPasswordString"
+        android:textColor="@color/black"
+        android:textSize="15sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/cardViewPassword" />
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardViewConfirmPassword"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="7dp"
+        android:layout_marginEnd="32dp"
+        app:cardElevation="4dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/passwordText3">
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/confirmPasswordEditTextLayout"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="center_vertical"
+            app:boxBackgroundColor="#FFFFFF"
+            app:boxStrokeColor="#FFFFFF"
+            app:boxStrokeWidth="0dp"
+            app:passwordToggleEnabled="true"
+            app:startIconDrawable="@drawable/ic_baseline_lock_24">
+
+            <com.bangkit.freshcanapp.ui.customview.PasswordEditText
+                android:id="@+id/confirmPasswordEditText"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:inputType="textPassword"
+                android:paddingStart="10dp"
+                android:paddingTop="10dp"
+                android:paddingEnd="10dp"
+                android:paddingBottom="10dp"
+                android:textSize="15dp"
+                tools:ignore="SpeakableTextPresentCheck" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+    </androidx.cardview.widget.CardView>
+
+    <FrameLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginStart="32dp"
         android:layout_marginTop="70dp"
         android:layout_marginEnd="32dp"
-        android:background="@drawable/rounded_button"
-        android:backgroundTint="#3F51B5"
-        android:text="@string/signupButtonText"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/cardViewPassword" />
+        app:layout_constraintTop_toBottomOf="@+id/cardViewConfirmPassword">
+
+        <Button
+            android:id="@+id/registerButton"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/rounded_button"
+            android:backgroundTint="#3F51B5"
+            android:text="@string/signupButtonText" />
+
+        <ProgressBar
+            android:id="@+id/progress_bar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:visibility="invisible" />
+    </FrameLayout>
 
 
     <TextView
@@ -211,7 +319,7 @@
         app:layout_constraintStart_toStartOf="parent" />
 
     <TextView
-        android:id="@+id/sign_up_button"
+        android:id="@+id/login_button"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="5dp"

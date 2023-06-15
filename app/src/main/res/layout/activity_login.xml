@@ -4,7 +4,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".ui.view.login.LoginActivity">
+    tools:context=".ui.view.login.LoginActivity"
+    android:fitsSystemWindows="false">
 
     <TextView
         android:id="@+id/loginText"
@@ -30,7 +31,7 @@
         android:layout_marginStart="32dp"
         android:layout_marginTop="32dp"
         android:layout_marginEnd="32dp"
-        android:text="@string/usernameEmailString"
+        android:text="@string/emailString"
         android:textColor="@color/black"
         android:textSize="15sp"
         app:layout_constraintEnd_toEndOf="parent"
@@ -74,6 +75,18 @@
         </com.google.android.material.textfield.TextInputLayout>
     </androidx.cardview.widget.CardView>
 
+    <TextView
+        android:id="@+id/emailEditTextError"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="40dp"
+        android:layout_marginTop="5dp"
+        android:text="@string/masukkan_email"
+        android:textColor="#BC0000"
+        android:visibility="gone"
+        android:textSize="12sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/cardViewUsername" />
 
     <TextView
         android:id="@+id/passwordText"
@@ -132,6 +145,19 @@
     </androidx.cardview.widget.CardView>
 
     <TextView
+        android:id="@+id/passwordEditTextError"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="40dp"
+        android:layout_marginTop="5dp"
+        android:text="@string/masukkan_password"
+        android:textColor="#BC0000"
+        android:visibility="gone"
+        android:textSize="12sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/cardViewPassword" />
+
+    <TextView
         android:id="@+id/forgot_password_button"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -144,19 +170,31 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/cardViewPassword" />
 
-    <Button
-        android:id="@+id/button"
+    <FrameLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginStart="32dp"
         android:layout_marginTop="70dp"
         android:layout_marginEnd="32dp"
-        android:background="@drawable/rounded_button"
-        android:backgroundTint="#3F51B5"
-        android:text="Login"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/cardViewPassword" />
+        app:layout_constraintTop_toBottomOf="@+id/cardViewPassword">
+
+        <Button
+            android:id="@+id/loginButton"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/rounded_button"
+            android:backgroundTint="#3F51B5"
+            android:text="Login" />
+
+        <ProgressBar
+            android:id="@+id/progress_bar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:visibility="invisible" />
+    </FrameLayout>
 
 
     <TextView
