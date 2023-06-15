@@ -19,7 +19,7 @@ data class UploadImageResponse(
 
 @Parcelize
 data class PayloadUploadImage(
-    @field:SerializedName("informatioName")
+    @field:SerializedName("informationName")
     val informationName: String? = null,
 
     @field:SerializedName("id")

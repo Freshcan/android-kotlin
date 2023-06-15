@@ -45,7 +45,7 @@ class MainViewModel(private val repo: FreshcanRepository) : ViewModel() {
 
         val requestImageFile = image.asRequestBody("image/jpeg".toMediaTypeOrNull())
         val imageMultipart: MultipartBody.Part = MultipartBody.Part.createFormData(
-            "photo",
+            "file",
             image.name,
             requestImageFile
         )
@@ -58,6 +58,8 @@ class MainViewModel(private val repo: FreshcanRepository) : ViewModel() {
                 if(response.isSuccessful){
                     val uploadImageResponseRaw = response.body()!!
                     _uploadImageResponse.value = uploadImageResponseRaw
+                    Log.e("MainViewModel", uploadImageResponseRaw.payload?.id!!)
+                    Log.e("MainViewModel", uploadImageResponseRaw.payload?.informationName!!)
                     getSpecificHistory(uploadImageResponseRaw.payload?.id!!, uploadImageResponseRaw.payload.informationName!!)
                 }else{
                     _isLoading.value = false

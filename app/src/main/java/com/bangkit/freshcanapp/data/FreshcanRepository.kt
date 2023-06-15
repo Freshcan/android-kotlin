@@ -35,7 +35,7 @@ class FreshcanRepository private constructor(
     }
 
     suspend fun uploadImage(file: MultipartBody.Part): Call<UploadImageResponse>{
-        return apiService.uploadImage(getUser().first().token, file)
+        return apiService.uploadImage("Bearer " + getUser().first().token, file)
     }
 
     fun register(name: String, email: String, password: String, confPassword: String): Call<RegisterResponse> {
