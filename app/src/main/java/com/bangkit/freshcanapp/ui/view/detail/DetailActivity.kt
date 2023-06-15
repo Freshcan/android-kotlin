@@ -130,7 +130,7 @@ class DetailActivity : AppCompatActivity() {
             binding.textPercentage.text = it.payload?.queryHistory?.get(0)?.percentage
             if(condition.equals("Rotten")){
                 val alphaPercentage =
-                    it.payload?.queryHistory?.get(0)?.percentage?.substring(0,2)?.toInt()!!
+                    it.payload?.queryHistory?.get(0)?.percentage!!.split(".")[0].toInt();
                 val color = ContextCompat.getColor(applicationContext, R.color.rotten_freshcan)
                 val alphaColor = ColorUtils.setAlphaComponent(color, (alphaPercentage * 255) / 100)// Replace with your hexadecimal color string
 
@@ -139,7 +139,7 @@ class DetailActivity : AppCompatActivity() {
                 binding.freshnessContentText.setTextColor(ContextCompat.getColor(applicationContext, R.color.rotten_freshcan))
             }else{
                 val alphaPercentage =
-                    it.payload?.queryHistory?.get(0)?.percentage?.substring(0,2)?.toInt()!!
+                    it.payload?.queryHistory?.get(0)?.percentage!!.split(".")[0].toInt();
                 val color = ContextCompat.getColor(applicationContext, R.color.green_freshcan)
                 val alphaColor = ColorUtils.setAlphaComponent(color, (alphaPercentage * 255) / 100)// Replace with your hexadecimal color string
 
