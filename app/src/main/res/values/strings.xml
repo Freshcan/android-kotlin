@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">FreshcanApp</string>
+    <string name="app_name">Freshcan</string>
     <string name="loginString">Login</string>
     <string name="usernameString">Username</string>
     <string name="passwordString">Password</string>
